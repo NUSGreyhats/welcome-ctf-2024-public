@@ -1,0 +1,17 @@
+author: jro
+category: Web
+connection_info: http://challs.nusgreyhats.org:32908
+description: 'Check out my Personal Home Page!
+
+
+  Author: jro'
+extra:
+  decay: 100
+  initial: 1000
+  minimum: 100
+flags:
+- grey{1_l0v3_php_17_15_50_53cur3}
+name: Private Hidden Paths
+state: visible
+type: dynamic
+value: 1000

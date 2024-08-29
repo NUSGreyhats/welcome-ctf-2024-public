@@ -1,0 +1,19 @@
+author: rat2libz
+category: Forensics
+description: 'my friend sent me this pdf, which just seems to be a bunch of temlate
+  lorem ipsum text
+
+
+  Author: rat2libz'
+extra:
+  decay: 100
+  initial: 1000
+  minimum: 100
+files:
+- dist-lorem_ipsum.zip
+flags:
+- grey{l0r3M_1pSUm_3XifT0oL}
+name: lorem ipsum
+state: visible
+type: dynamic
+value: 1000

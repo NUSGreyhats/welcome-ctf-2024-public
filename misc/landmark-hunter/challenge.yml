@@ -1,0 +1,19 @@
+author: Hexerberg
+category: Misc
+description: 'A landmark has recently been targeted by an attacker. However, all we
+  have is this text file, can you find the name of the landmark?
+
+
+  Author: Hexerberg'
+extra:
+  decay: 100
+  initial: 1000
+  minimum: 100
+files:
+- dist-landmark-hunter.zip
+flags:
+- grey{machu_picchu}
+name: Landmark Hunter
+state: visible
+type: dynamic
+value: 1000

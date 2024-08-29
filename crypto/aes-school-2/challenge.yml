@@ -1,0 +1,19 @@
+author: hadnot
+category: Crypto
+connection_info: nc challs.nusgreyhats.org 32001
+description: 'This is a classic AES challenge. Good luck!
+
+
+  Author: hadnot'
+extra:
+  decay: 100
+  initial: 1000
+  minimum: 100
+files:
+- dist-aes-school-2.zip
+flags:
+- grey{p4dd1ng_0r4cl3_pr0_g4m1ng}
+name: Intro to AES 2
+state: visible
+type: dynamic
+value: 1000

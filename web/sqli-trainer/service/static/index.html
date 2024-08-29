@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQLi Trainer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+        }
+        .login-container {
+            max-width: 400px;
+            margin: 50px auto;
+        }
+        .form-control {
+            background-color: #2b2b2b;
+            border-color: #444444;
+            color: #ffffff;
+        }
+        .form-control:focus {
+            background-color: #2b2b2b;
+            border-color: #007bff;
+            color: #ffffff;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+        .code-container {
+            margin: 50px auto;
+        }
+        pre {
+            background-color: #1e1e1e;
+            border-radius: 5px;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="login-container">
+                    <h2 class="text-center mb-4">SQLi Trainer Login</h2>
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="username" name="username" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="text" class="form-control" id="password" name="password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Log In</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="code-container">
+
+    <h3 class="mb-3 text-center">SQL query</h3>
+    <pre><code class="sql" id="sql_code" style="padding: 15px">SELECT name FROM users WHERE name = '{username}' AND pass = '{password}'</code></pre>
+                    <h3 class="mb-3 text-center">Backend Code</h3>
+                    <pre><code class="python" id="code" style="padding: 15px">def check_login(username, password):
+    conn = sqlite3.connect(':memory:')
+    cursor = conn.cursor()
+    # Setup database
+    cursor.execute("create table users (name text, pass text)")
+    cursor.execute(f"insert into users values ('user', '{secrets.token_hex(16)}')")
+    # Execute query
+    query = f"SELECT name FROM users WHERE name = '{username}' AND pass = '{password}'"
+    result = cursor.execute(query).fetchall()
+    conn.close()
+    if len(result) != 1:
+        return "Login failed!"
+    elif result[0][0] != "admin":
+        return "Only the admin can have the flag!"
+    return flag</code></pre>
+    <div id="result_show" style="display: none;">
+        <h3 class="mb-3 text-center">Result</h3>
+        <pre><code class="plain" id="result_display" style="padding: 15px"></code></pre>
+    </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('loginForm');
+        const inputs = form.querySelectorAll('input');
+
+        function submitForm() {
+            const username = JSON.stringify(document.getElementById("username").value.trim()).slice(1, -1);
+            const password = JSON.stringify(document.getElementById("password").value.trim()).slice(1, -1);
+
+            const code = document.getElementById("code");
+            const formData = new FormData(form);
+            fetch('/login', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                let result = data.res ? "# result = " + JSON.stringify(data.res) : "";
+                let error = data.err ? "-- Error: " + data.err +"\n": ""
+                let code_template = `def check_login(username, password):
+    conn = sqlite3.connect(':memory:')
+    cursor = conn.cursor()
+    # Setup database
+    cursor.execute("create table users (name text, pass text)")
+    cursor.execute(f"insert into users values ('user', '{secrets.token_hex(16)}')")
+    # Execute query
+    query = f"SELECT name FROM users WHERE name = '${username}' AND pass = '${password}'"
+    result = cursor.execute(query).fetchall()
+    ${result}
+    conn.close()
+    if len(result) != 1:
+        return "Login failed!"
+    elif result[0][0] != "admin":
+        return "Only the admin can have the flag!"
+    return flag`
+                code.textContent = code_template;
+                hljs.highlightElement(code);
+
+                const username_raw = document.getElementById("username").value.trim();
+                const password_raw = document.getElementById("password").value.trim();
+
+
+                const sql_code_template = `${error}SELECT name FROM users WHERE name = '${username_raw}' AND pass = '${password_raw}'`
+                sql_code.textContent = sql_code_template;
+                hljs.highlightElement(sql_code);
+                result_show.style = "";
+                result_display.textContent = data.flag ? data.flag : "An error occurred!"
+            })
+        }
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            submitForm();
+        });
+
+        inputs.forEach(input => {
+            input.addEventListener('input', submitForm);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+author: Jin Kai
+category: Misc
+connection_info: nc challs.nusgreyhats.org 32010
+description: 'In cybersecurity, we tend to have to interact with remote services often
+  that are exposed to the internet.
+
+
+  The easiest way to interact with such services is to initiate a direct TCP connection
+  to the given IP address and port number.
+
+
+  Try connecting to the remote service by running the `nc ... ...` command below in
+  a linux terminal.
+
+
+  Author: Jin Kai'
+extra:
+  decay: 100
+  initial: 1000
+  minimum: 100
+flags:
+- grey{a_journey_of_a_thousand_miles_continues_with_the_second_step}
+name: "Sanity Check 2 \U0001F37C"
+state: visible
+type: dynamic
+value: 1000

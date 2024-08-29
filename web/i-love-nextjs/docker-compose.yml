@@ -1,0 +1,55 @@
+services:
+  database:
+    container_name: database
+    image: docker.io/library/postgres:16-alpine
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready"]
+      interval: 5s
+      timeout: 3s
+      retries: 3
+    restart: unless-stopped
+    read_only: true
+    env_file:
+      - .env
+    ports:
+      - 5432:5432
+    tmpfs:
+      - /run
+      - /tmp
+
+  challenge:
+    # <category-name>-<challenge-name>
+    container_name: web-ilovenextjs
+    build: service
+    env_file:
+      - service/.env
+    ports:
+      # host port: container port
+      # Will be used in generation of CTFd connection info
+      - 32906:3000
+
+  migrate:
+    container_name: prisma_migrate
+    build:
+      context: service
+      dockerfile: migrate.Dockerfile
+    read_only: true
+    env_file:
+      - service/.env
+    depends_on:
+      database:
+        condition: service_healthy
+
+  seed:
+    container_name: prisma_seed
+    build:
+      context: service
+      dockerfile: seed.Dockerfile
+    read_only: true
+    env_file:
+      - service/.env
+    depends_on:
+      database:
+        condition: service_healthy
+      migrate:
+        condition: service_completed_successfully

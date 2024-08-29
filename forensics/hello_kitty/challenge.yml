@@ -1,0 +1,18 @@
+author: rat2libz
+category: Forensics
+description: 'its hidden in the image. maybe a stego tool can help me find the scret?/
+
+
+  Author: rat2libz'
+extra:
+  decay: 100
+  initial: 1000
+  minimum: 100
+files:
+- dist-hello_kitty.zip
+flags:
+- grey{easy_$T3g0_wIth_K1TTy}
+name: hELLO KItty
+state: visible
+type: dynamic
+value: 1000

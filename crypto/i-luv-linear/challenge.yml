@@ -1,0 +1,18 @@
+author: Ariana
+category: Crypto
+description: 'I heard matrices are cool
+
+
+  Author: Ariana'
+extra:
+  decay: 100
+  initial: 1000
+  minimum: 100
+files:
+- dist-i-luv-linear.zip
+flags:
+- grey{m4tr1ces_4re_s0_c00l_heheh}
+name: i luv linear
+state: visible
+type: dynamic
+value: 1000

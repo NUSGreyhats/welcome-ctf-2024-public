@@ -1,0 +1,20 @@
+author: glendoodle
+category: Forensics
+description: 'I saved my login credentials at /root/flag.txt but I forgot I need my
+  login credentials to view the saved credential file...
+
+
+  Challenge file: https://drive.google.com/file/d/1kdTlWQm9knWRFMcoIjVZZFjhgshf1kJC/view?usp=sharing
+
+
+  Author: glendoodle'
+extra:
+  decay: 100
+  initial: 1000
+  minimum: 100
+flags:
+- grey{wh0_n33d5_1091n_c23d3n71415}
+name: Lost my login creds
+state: visible
+type: dynamic
+value: 1000

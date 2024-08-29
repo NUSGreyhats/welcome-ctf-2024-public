@@ -1,0 +1,21 @@
+Flag: grey{wh0_n33d5_1091n_c23d3n71415}
+
+Idea:
+
+.ova files are compressed and running `strings` will not retrieve the flag (not from my testing). Instead, we can use free software like VirtualBox or VMware to 'unpack' the .ova file into sub-files, including a .vmdk file. Having this .vmdk file, we can run it through FTK Imager (Autopsy should be possible as well in theory but im unable to get it via Autopsy) and inspect the file system of the given image.
+
+Learning point:
+
+We don't need login creds to access the file system of .ova image, as long as the file system is not encrypted. But to do so, we need to 'unpack' the .ova file first.
+
+To solve:
+
+1. Import given .ova file as Virtual Machine
+
+2. Locate where the unpacked files are.
+
+3. Add the .vmdk file into FTK Imager 
+
+Alternative login credentials:
+
+glendoodle:1928a84deb8a749

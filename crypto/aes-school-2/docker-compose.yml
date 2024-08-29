@@ -1,0 +1,6 @@
+services:
+    challenge:
+      container_name: crypto-aes-school-2
+      build: service
+      ports:
+          - 32001:5000

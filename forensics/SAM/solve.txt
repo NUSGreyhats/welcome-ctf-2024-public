@@ -1,0 +1,3 @@
+The SAM file can be parsed with RegRipper into a readable txt file.
+Look through the parsed file and find the administrator group.
+Find the user account with the SID under the administrator group.

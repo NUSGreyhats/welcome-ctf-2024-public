@@ -1,0 +1,3 @@
+Download Event Log Explorer
+Find the accounts that have failed login entries.
+The first successful login entry with the previously failed login attempts is the flag.

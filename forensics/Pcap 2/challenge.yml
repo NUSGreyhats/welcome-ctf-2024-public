@@ -1,0 +1,18 @@
+author: glendoodle
+category: Forensics
+description: 'I have found myself to be the man in the middle... now what...
+
+
+  Author: glendoodle'
+extra:
+  decay: 100
+  initial: 1000
+  minimum: 100
+files:
+- dist-pcap-2.zip
+flags:
+- grey{3x724c71n9_f1135_15_345y}
+name: PCAP 2
+state: visible
+type: dynamic
+value: 1000

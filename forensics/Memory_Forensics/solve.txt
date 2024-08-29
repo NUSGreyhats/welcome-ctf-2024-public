@@ -1,0 +1,2 @@
+Using volatility, either use windows.pslist or windows.pstree with the verbose flag.
+

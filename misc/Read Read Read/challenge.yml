@@ -1,0 +1,18 @@
+author: heretic275
+category: Misc
+description: 'Sending files in plaintext can work too! If you know what you are doing...
+
+
+  Author: heretic275'
+extra:
+  decay: 100
+  initial: 1000
+  minimum: 100
+files:
+- dist-read-read-read.zip
+flags:
+- grey{iNVi5b1e_1nK_w0rKs_h3r3_t0o}
+name: Read Read Read
+state: visible
+type: dynamic
+value: 1000

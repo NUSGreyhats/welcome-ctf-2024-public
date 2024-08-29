@@ -1,0 +1,19 @@
+author: jro
+category: Web
+connection_info: http://challs.nusgreyhats.org:32905
+description: 'Many Cecure web Cervers are written in C
+
+
+  Author: jro'
+extra:
+  decay: 100
+  initial: 1000
+  minimum: 100
+files:
+- dist-cecure-cerver.zip
+flags:
+- grey{3xpl0171n6_l061c_bu65}
+name: Cecure Cerver
+state: visible
+type: dynamic
+value: 1000

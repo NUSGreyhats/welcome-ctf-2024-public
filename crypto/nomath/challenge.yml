@@ -1,0 +1,18 @@
+author: hadnot
+category: Crypto
+description: 'I hope you like English...
+
+
+  Author: hadnot'
+extra:
+  decay: 100
+  initial: 1000
+  minimum: 100
+files:
+- dist-nomath.zip
+flags:
+- grey{just_use_quipqiup_ez}
+name: "No Math Crypto \U0001F37C"
+state: visible
+type: dynamic
+value: 1000

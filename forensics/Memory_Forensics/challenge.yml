@@ -1,0 +1,17 @@
+author: heretic275
+category: Forensics
+description: "Computer memory is a crucial component that stores data and instructions\
+  \ for quick access by the CPU.\n\nThis includes executable files and the arguments\
+  \ supplied to them too! \n\nAssuming the data has not been overwritten by newer\
+  \ processes...\n\nFile:\n\nhttps://drive.google.com/drive/folders/1MoV4mhlEKIoaTGQ7leyftn1jXOnspwKq\n\
+  \nAuthor: heretic275"
+extra:
+  decay: 100
+  initial: 1000
+  minimum: 100
+flags:
+- grey{i_s3e_wH@t_y0u_d1D_tH3rE}
+name: I Have Good Memory
+state: visible
+type: dynamic
+value: 1000

@@ -1,0 +1,19 @@
+author: glendoodle
+category: Forensics
+description: 'What could go wrong with a login server that isnt encrypted? Find the
+  attempted login with greyhats as the username
+
+
+  Author: glendoodle'
+extra:
+  decay: 100
+  initial: 1000
+  minimum: 100
+files:
+- dist-pcap-1.zip
+flags:
+- grey{ju57_f0110w_7h3_57234m}
+name: PCAP 1
+state: visible
+type: dynamic
+value: 1000

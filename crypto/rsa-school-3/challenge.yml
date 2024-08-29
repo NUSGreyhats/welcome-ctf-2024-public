@@ -1,0 +1,18 @@
+author: hadnot
+category: Crypto
+description: 'Do you like math?
+
+
+  Author: hadnot'
+extra:
+  decay: 100
+  initial: 1000
+  minimum: 100
+files:
+- dist-rsa-school-3.zip
+flags:
+- grey{w0w_m4th_15_50_fun}
+name: Intro to RSA 3
+state: visible
+type: dynamic
+value: 1000

@@ -1,0 +1,7 @@
+services:
+  dreamfactory:
+    container_name: misc-sanity-check-2
+    build: ./service
+    privileged: true
+    ports:
+      - 32010:5000

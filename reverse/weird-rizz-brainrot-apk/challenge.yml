@@ -1,0 +1,21 @@
+author: rizz app
+category: Reverse
+description: 'My friend wrote this annoying program filled with brainrot.
+
+
+  Can you find the passcode to stop the skibidi sigma brainrot T\_T
+
+
+  Author: rizz app'
+extra:
+  decay: 100
+  initial: 1000
+  minimum: 100
+files:
+- dist-weird-rizz-brainrot-apk.zip
+flags:
+- grey{skibidi_toilet_W_level_500_gyatt_rizz}
+name: Weird Brainrotted APK
+state: visible
+type: dynamic
+value: 1000

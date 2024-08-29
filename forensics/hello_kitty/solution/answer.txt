@@ -1,0 +1,6 @@
+kali: steghide extract -sf hellokitty.jpg -xf answer.txt
+
+
+its not so easy afterall.. its only the begining of steganography!
+
+grey{easy_$T3g0_wIth_K1TTy}

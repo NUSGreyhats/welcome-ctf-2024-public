@@ -1,0 +1,5 @@
+To solve, open baby.pcap file in Wireshark. Navigate to Edit > Find packet > Change to String > Change to packet details > search 'greyhats'
+
+Alternatively, follow TCP stream 10 (apply filter: tcp.stream eq 10)
+
+Flag: grey{ju57_f0110w_7h3_57234m}

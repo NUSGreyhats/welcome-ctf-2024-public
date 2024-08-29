@@ -1,0 +1,19 @@
+author: heretic275
+category: Forensics
+description: "A random visitor has been walking around in our office. \n\nHe has tried\
+  \ to gain access to one of our accounts by taking a peek at the monitor screen.\n\
+  \nWhose account was accessed and when did the visitor gained access?\n\nFlag format:\n\
+  \nfirstname_lastname_time\n\nIf name is Bob Lee and the time is 22:34:41 (hh:mm:ss),\
+  \ then flag is grey{bob_lee_223441}\n\nAuthor: heretic275"
+extra:
+  decay: 100
+  initial: 1000
+  minimum: 100
+files:
+- dist-shoulder-peeking.zip
+flags:
+- grey{rebecca_yeo_212619}
+name: Shoulder Peeking
+state: visible
+type: dynamic
+value: 1000

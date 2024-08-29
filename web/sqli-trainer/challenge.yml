@@ -1,0 +1,17 @@
+author: jro
+category: Web
+connection_info: http://challs.nusgreyhats.org:32901
+description: "SQL is the most common language used to query relational databases.\
+  \ \n\nHowever, it is easy for programmers to create a situation where user-controlled\
+  \ data is insecurely inserted into a SQL query.\n\nCan you exploit it?\n\nAuthor:\
+  \ jro"
+extra:
+  decay: 100
+  initial: 1000
+  minimum: 100
+flags:
+- grey{SQLi_1s_st1ll_rel3v4nt_1n_2024}
+name: "SQLi Trainer \U0001F37C"
+state: visible
+type: dynamic
+value: 1000

@@ -1,0 +1,20 @@
+author: ocean
+category: Web
+connection_info: http://challs.nusgreyhats.org:33335
+description: 'My previous markdown parser got hacked. Thanks to your feedback, I''ve
+  fixed the issue. Can you give me feedback for version 2?
+
+
+  Author: ocean'
+extra:
+  decay: 100
+  initial: 1000
+  minimum: 100
+files:
+- dist-markdown-parser-2.zip
+flags:
+- grey{l00ks_l1k3_y0u_c4n_Vue_fl4g}
+name: Markdown Parser 2
+state: visible
+type: dynamic
+value: 1000

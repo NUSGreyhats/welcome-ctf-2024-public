@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Hacker Publications</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Check if 't' is set in localStorage
+            const token = localStorage.getItem('t');
+            if (!token) {
+                // Redirect to register.html if 't' is not set
+                window.location.href = "/register.html";
+            } else {
+                // Make a GET request to /api.php with the necessary query parameters
+                const url = `/api.php?p=/index.html&t=${token}&a=g`;
+                fetch(url)
+                    .then(response => response.text())
+                    .then(data => {
+                        // Insert the returned HTML into the page
+                        document.getElementById('content').innerHTML = data;
+                    })
+                    .catch(error => console.error('Error:', error));
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Pro Hacker Publications</h1>
+        <div id="content" class="mt-3">
+            <!-- Content loaded from API will be displayed here -->
+        </div>
+    </div>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

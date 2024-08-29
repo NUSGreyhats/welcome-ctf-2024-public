@@ -1,0 +1,18 @@
+author: Ariana
+category: Crypto
+description: 'Let''s implement RSA together!
+
+
+  Author: Ariana'
+extra:
+  decay: 100
+  initial: 1000
+  minimum: 100
+files:
+- dist-rsa-school.zip
+flags:
+- grey{c0ngr4tz_u_c4n_d0_RSA_04728642737968273931467983}
+name: "Intro to RSA \U0001F37C"
+state: visible
+type: dynamic
+value: 1000

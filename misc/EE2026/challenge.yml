@@ -1,0 +1,23 @@
+author: Hackin7
+category: Misc
+description: 'Oh so this one ah, need your student identification number, need this
+  digit, need digit ah.
+
+
+  Flag is `grey{<student_identification_number>}`, where the identification number
+  is 9 characters/digits long.
+
+
+  Author: Hackin7'
+extra:
+  decay: 100
+  initial: 1000
+  minimum: 100
+files:
+- dist-ee2026.zip
+flags:
+- grey{21248xG8}
+name: EE2026
+state: visible
+type: dynamic
+value: 1000

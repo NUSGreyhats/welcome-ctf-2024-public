@@ -1,0 +1,19 @@
+author: glendoodle
+category: Forensics
+description: 'Someone hacked into my PC... can you find out how they exfiltrated sensitive
+  information from this pcap?
+
+
+  Author: glendoodle'
+extra:
+  decay: 100
+  initial: 1000
+  minimum: 100
+files:
+- dist-pcap-3.zip
+flags:
+- grey{dn5_3xf11724710n_15_c001}
+name: PCAP 3
+state: visible
+type: dynamic
+value: 1000

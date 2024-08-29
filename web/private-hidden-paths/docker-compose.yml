@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  web-php:
+    image: web-php
+    build:
+      context: service
+    environment:
+      SECRET_USER: pC2kltJiW2
+    ports:
+      - 32908:80

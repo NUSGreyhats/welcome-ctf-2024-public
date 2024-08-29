@@ -1,0 +1,6 @@
+services:
+    challenge:
+      container_name: crypto-rc4-signing-scheme
+      build: service
+      ports:
+          - 32000:5000

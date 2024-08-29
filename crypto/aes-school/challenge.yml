@@ -1,0 +1,19 @@
+author: hadnot
+category: Crypto
+connection_info: nc challs.nusgreyhats.org 32000
+description: 'Time to learn AES!
+
+
+  Author: hadnot'
+extra:
+  decay: 100
+  initial: 1000
+  minimum: 100
+files:
+- dist-aes-school.zip
+flags:
+- grey{wow_aes_is_so_fun_right}
+name: Intro to AES
+state: visible
+type: dynamic
+value: 1000

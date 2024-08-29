@@ -1,0 +1,19 @@
+author: jro
+category: Pwn
+connection_info: nc challs.nusgreyhats.org 32832
+description: 'Where got time????
+
+
+  Author: jro'
+extra:
+  decay: 100
+  initial: 1000
+  minimum: 100
+files:
+- dist-ord.zip
+flags:
+- grey{1n7363r5_c4n_0v3rfl0w_700}
+name: ORD
+state: visible
+type: dynamic
+value: 1000

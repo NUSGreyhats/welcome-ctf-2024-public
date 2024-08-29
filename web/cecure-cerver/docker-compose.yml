@@ -1,0 +1,11 @@
+services:
+    challenge:
+      # <category-name>-<challenge-name>
+      container_name: web-cecure-cerver
+      build: service
+      # Required if you're using pwn.Dockerfile
+      privileged: true
+      ports:
+        # host port: container port
+        # Will be used in generation of CTFd connection info
+        - 32905:5000

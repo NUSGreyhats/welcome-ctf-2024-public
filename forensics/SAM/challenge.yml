@@ -1,0 +1,28 @@
+author: heretic275
+category: Forensics
+description: 'Who is the administrator and what time was his account created? The
+  date is not required.
+
+
+  Flag format:
+
+
+  firstname_lastname_time
+
+
+  If name is Bob Lee and the time is 22:34:41 (hh:mm:ss), then the flag is grey{bob_lee_223441}
+
+
+  Author: heretic275'
+extra:
+  decay: 100
+  initial: 1000
+  minimum: 100
+files:
+- dist-sam.zip
+flags:
+- grey{james_rockya_115648}
+name: Who are you??? SAM!
+state: visible
+type: dynamic
+value: 1000

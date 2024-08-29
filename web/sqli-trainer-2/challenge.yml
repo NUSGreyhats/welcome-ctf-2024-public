@@ -1,0 +1,17 @@
+author: jro
+category: Web
+connection_info: http://challs.nusgreyhats.org:32907
+description: 'We disabled the login :)
+
+
+  Author: jro'
+extra:
+  decay: 100
+  initial: 1000
+  minimum: 100
+flags:
+- grey{5l33p_15_1mp0r74n7}
+name: SQLi Trainer 2
+state: visible
+type: dynamic
+value: 1000
